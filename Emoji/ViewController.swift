@@ -10,9 +10,12 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
+    @IBAction func showMessage(sender: UIButton) {
+        //when user clicks the button
+        //a pop up should come up
+        let alertController = UIAlertController(title: "Transportation", message: "The transportation should be...", preferredStyle: UIAlertController.Style.alert)
+        alertController.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+        present(alertController, animated: true, completion: nil)
     }
 
 
